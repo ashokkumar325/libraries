@@ -15,6 +15,5 @@ def newdeploy(jobname,ip,contextpath)
 
 def runselenum(jobname)
 {
-     git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
-  sh label: '', script: "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar" 
+  sh label: '', script: "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar" 
 }
