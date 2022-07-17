@@ -12,3 +12,8 @@ def newdeploy(jobname,ip,contextpath)
 {
   sh label: '', script: 'scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${contextpath}.war'
 }
+
+def runselenium(jobname)
+{
+  sh label: '', script: "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
+}
